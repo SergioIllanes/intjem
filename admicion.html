@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisiones Generales - Instituto Técnico Jesús María</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+        .dropdown.active .dropdown-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+                padding: 1rem;
+            }
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background: transparent;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        h1 {
+            font-family: 'Poetsen One', sans-serif;
+            color: #1e3a8a;
+        }
+        h2 {
+            font-family: 'Playwrite AU SA', cursive;
+            color: #1e3a8a;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+        ul li:before {
+            content: "•";
+            color: #1e3a8a;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="gradient-bg p-4 text-white sticky top-0 z-50 shadow-lg border-b-2 border-gray-800">
+        <div class="flex justify-between items-center mb-2">
+            <div class="flex space-x-4 text-sm">
+                <a href="tel:+59112345678" class="hover:text-blue-100 transition flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> +591 73822455
+                </a>
+                <a href="tel:+59187654321" class="hover:text-blue-100 transition flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> +591 73822455
+                </a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="tel:+59112345678" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg transition text-sm flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/59173822455" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-lg transition text-sm flex items-center">
+                    <i class="fab fa-whatsapp mr-1"></i> Enviar Mensaje
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto flex justify-between items-center">
+            
+            <a href="index.html" class="text-3xl font-extrabold tracking-tight">INTJEM</a>
+            <button class="sm:hidden text-2xl focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-menu hidden sm:flex sm:space-x-8">
+                <a href="index.html" class="hover:text-blue-100 transition font-medium">Inicio</a>
+                <div class="dropdown relative group">
+                    <a href="#quienes-somos" class="hover:text-blue-100 transition font-medium flex items-center dropdown-toggle">Quiénes Somos <i class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="dropdown-menu bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+                        <a href="historia.html" class="block px-4 py-2 hover:bg-blue-100">Historia</a>
+                        <a href="plantelDoc.html" class="block px-4 py-2 hover:bg-blue-100">Plantel Docente</a>
+                    </div>
+                </div>
+                <div class="dropdown relative group">
+                    <a href="#quienes-somos" class="hover:text-blue-100 transition font-medium flex items-center dropdown-toggle">Admicion <i class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="dropdown-menu bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+                        <a href="admicion.html" class="block px-4 py-2 hover:bg-blue-100">Admiciones Generales</a>
+                        
+                    </div>
+                </div>
+                <div class="dropdown relative group">
+                    <a href="#carreras" class="hover:text-blue-100 transition font-medium flex items-center dropdown-toggle">Nuestras Carreras <i class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="dropdown-menu bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+                        <a href="telecomunicaciones.html" class="block px-4 py-2 hover:bg-blue-100">Telecomunicaciones</a>
+                        <a href="sistemas.html" class="block px-4 py-2 hover:bg-blue-100">Sistemas Informáticos</a>
+                        <a href="secretariado.html" class="block px-4 py-2 hover:bg-blue-100">Secretariado Ejecutivo</a>
+                    </div>
+                </div>
+                <a href="contactos.html" class="hover:text-blue-100 transition font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Main Content -->
+     <div class="container mx-auto py-10 px-4">
+        <!-- Top Row: Image and Text Side-by-Side -->
+        <div class="flex flex-col md:flex-row items-center mb-8">
+            <!-- Left: Image -->
+            <div class="md:w-2/5 mb-6 md:mb-0">
+                <img src="instP.jpg" alt="Estudiantes en el INTJEM" class="w-full h-64 object-cover rounded-lg shadow-lg">
+            </div>
+            <!-- Right: Text -->
+            <div class="md:w-3/5 md:pl-6">
+                <h1 class="text-3xl font-bold mb-4">¿Por qué estudiar en el Instituto Técnico Jesús María?</h1>
+                <p class="text-gray-700">
+                    En el Instituto Técnico Jesús María te formamos como profesional y te ayudamos a consolidar como persona. Con nosotros puedes aprender, practicar y compartir. Acompañamos una familia que está dispuesta a ayudarte a realizar tus metas profesionales. Contamos con docentes de calidad, docentes que saben enseñar y que dirigen procesos de aprendizaje. Además, contamos con horarios cómodos que permiten a nuestros estudiantes trabajar y estudiar al mismo tiempo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Requirements -->
+        <section class="bg-sky-200 p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold mb-4 text-sky-800">Requisitos Nuevos Inscritos</h2>
+            <p class="text-gray-700 mb-4">
+                El ingreso al Instituto Técnico Jesús María exige que el estudiante haya concluido con los estudios del nivel de educación secundaria comunitaria productiva o con los ciclos de aprendizajes especializados, o sus equivalentes en normativa anterior, para lo cual deberá presentar obligatoriamente los siguientes documentos:
+            </p>
+            <ul class="text-gray-700 space-y-2">
+                <li>2 Certificados de Nacimiento Originales.</li>
+                <li>2 Fotocopias Simples de Cédula de Identidad Vigente.</li>
+                <li>2 Fotocopias legalizadas del diploma de bachiller (Si el diploma de bachiller está en trámite, se aceptarán provisionalmente por el tiempo improrrogable de ocho (8) meses, fotocopia de libreta escolar o el certificado de estudios original del último curso aprobado o su equivalente en normativa anterior, firmado por las autoridades educativas correspondientes).</li>
+                <li>Para inscribirse a una de nuestras carreras el estudiante deberá cancelar un total de 510 Bs. como aporte anual y único pago en toda la gestión.</li>
+            </ul>
+        </section>
+        <br>
+        <section class="bg-sky-200 p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold mb-4 text-sky-800">Requisitos para la convalidación de Carrera</h2>
+            <p class="text-gray-700 mb-4">
+                Para la convalidación de carrera aprobada bth , se deberán cumplir con los siguientes requisitos:
+            </p>
+            <ul class="text-gray-700 space-y-2">
+                <li>2 Certificados de Nacimiento Originales.</li>
+                <li>2 Fotocopias Simples de Cédula de Identidad Vigente.</li>
+                <li>Titulo de tecnico medio original y copia </li>
+                <li>2 Fotocopias legalizadas del diploma de bachiller (Si el diploma de bachiller está en trámite, se aceptarán provisionalmente por el tiempo improrrogable de ocho (8) meses, fotocopia de libreta escolar o el certificado de estudios original del último curso aprobado o su equivalente en normativa anterior, firmado por las autoridades educativas correspondientes).</li>
+                <li></li>Para inscribirse a una de nuestras carreras el estudiante deberá cancelar un total de 510 Bs. como aporte anual y único pago en toda la gestión.</li>
+            </ul>
+        </section>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-12">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+            <div><img src="logo_white.png" alt="">
+            </div>
+            <div>
+               <br>
+                <h3 class="text-lg sm:text-xl font-semibold mb-4">Empezar</h3>
+                
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link transition">Iniciar Sesión</a></li>
+                    <li><a href="#" class="footer-link transition">Admisión</a></li>
+                    <li><a href="#carreras" class="footer-link transition">Nuestras Carreras</a></li>
+                </ul>
+            </div>
+            <div>
+                <br>
+                <h3 class="text-lg sm:text-xl font-semibold mb-4">Apoyo</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link transition">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="footer-link transition">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <br>
+                <h3 class="text-lg sm:text-xl font-semibold mb-4">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link transition">Términos de Servicio</a></li>
+                    <li><a href="#" class="footer-link transition">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div>
+                <br>
+                <h3 class="text-lg sm:text-xl font-semibold mb-4">Contactos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#contacto" class="footer-link transition">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('active');
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        }
+
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isActive = dropdown.classList.contains('active');
+                
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('active');
+                });
+
+                dropdown.classList.toggle('active');
+
+                if (isActive) {
+                    window.location.href = toggle.getAttribute('href');
+                }
+            });
+
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    dropdown.classList.remove('active');
+                    if (window.innerWidth < 768) {
+                        document.querySelector('.nav-menu').classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            const isDropdown = e.target.closest('.dropdown');
+            if (!isDropdown) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            }
+        });
+    </script>
+    <footer class="footer">
+        <ul class="social-list">
+            <li class="social-item">
+                <a href="#" class="social-btn">SÍGUENOS EN</a>
+            </li>
+            <li class="social-item">
+                <a href="https://www.youtube.com/channel/UC1WdF2amZjCVAlOlbUbhcMg" target="_blank" class="social-btn youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>YouTube</h1>
+                    <p>Instituto Técnico Jesús María</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://twitter.com/InT_JesusMaria" target="_blank" class="social-btn twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Twitter</h1>
+                    <p>@INTJEMinformacion</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://www.facebook.com/IntJem/" target="_blank" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Facebook</h1>
+                    <p>Instituto Técnico Jesús María</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://www.instagram.com/intjem.bo/" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Instagram</h1>
+                    <p>INTJEM.informacion</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://plus.google.com/u/0/106759533525763261202" target="_blank" class="social-btn email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Correo INTJEM</h1>
+                    <p>Correo Institucional</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://goo.gl/maps/fzPVWHQwZRH2" target="_blank" class="social-btn gmap">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Google Maps</h1>
+                    <p>Nuestra Ubicación</p>
+                </div>
+            </li>
+        </ul>
+        <a href="index.html" class="go-top">^</a>
+    </footer>
+    
+</body>
+</html>

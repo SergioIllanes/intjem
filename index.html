@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Técnico Jesús María</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Poetsen+One&display=swap" rel="stylesheet">
+    </head>
+<body class="bg-blue-50 font-sans">
+    <!-- Navbar -->
+    <nav class="gradient-bg p-4 text-white sticky top-0 z-50 shadow-lg border-b-2 border-gray-800">
+        <div class="flex justify-between items-center mb-2">
+            <div class="flex space-x-4 text-sm">
+                <a href="tel:+59112345678" class="hover:text-blue-100 transition flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> +591 73822455
+                </a>
+                <a href="tel:+59187654321" class="hover:text-blue-100 transition flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> +591 73822455
+                </a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="tel:+59112345678" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg transition text-sm flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/59173822455" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-lg transition text-sm flex items-center">
+                    <i class="fab fa-whatsapp mr-1"></i> Enviar Mensaje
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto flex justify-between items-center">
+            
+            <a href="index.html" class="text-3xl font-extrabold tracking-tight">INTJEM</a>
+            <button class="sm:hidden text-2xl focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-menu hidden sm:flex sm:space-x-8">
+                <a href="index.html" class="hover:text-blue-100 transition font-medium">Inicio</a>
+                <div class="dropdown relative group">
+                    <a href="#quienes-somos" class="hover:text-blue-100 transition font-medium flex items-center dropdown-toggle">Quiénes Somos <i class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="dropdown-menu bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+                        <a href="historia.html" class="block px-4 py-2 hover:bg-blue-100">Historia</a>
+                        <a href="plantelDoc.html" class="block px-4 py-2 hover:bg-blue-100">Plantel Docente</a>
+                    </div>
+                </div>
+                <div class="dropdown relative group">
+                    <a href="#quienes-somos" class="hover:text-blue-100 transition font-medium flex items-center dropdown-toggle">Admicion <i class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="dropdown-menu bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+                        <a href="admicion.html" class="block px-4 py-2 hover:bg-blue-100">Admiciones Generales</a>
+                        
+                    </div>
+                </div>
+                <div class="dropdown relative group">
+                    <a href="#carreras" class="hover:text-blue-100 transition font-medium flex items-center dropdown-toggle">Nuestras Carreras <i class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="dropdown-menu bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+                        <a href="telecomunicaciones.html" class="block px-4 py-2 hover:bg-blue-100">Telecomunicaciones</a>
+                        <a href="sistemas.html" class="block px-4 py-2 hover:bg-blue-100">Sistemas Informáticos</a>
+                        <a href="secretariado.html" class="block px-4 py-2 hover:bg-blue-100">Secretariado Ejecutivo</a>
+                    </div>
+                </div>
+                <a href="contactos.html" class="hover:text-blue-100 transition font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg">
+        <img src="logo_white.png" alt="Logo INTJEM" class="logo">
+    </section>
+    
+    <!-- Welcome Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 transform transition-all duration-300 hover:scale-105">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+                    <img src="miguel.jpg" alt="Foto del Rector" class="w-50 h-50 border-4 border-blue-500">
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4">¡Bienvenidos al Instituto Técnico Jesús María!</h1>
+                    <p class="text-gray-600 leading-relaxed">
+                        Los invitamos a descubrir las oportunidades que el Instituto Técnico Jesús María ofrece. Nos dedicamos a ser un referente en educación, formando profesionales íntegros y capacitados para un futuro lleno de posibilidades.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mt-4">
+                        Con compromiso y entusiasmo, <br>
+                        <span class="font-semibold">Ing. Miguel Francisco Bohorquez Brañez</span> <br>
+                        Rector
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Misión - Visión - Filosofía Section -->
+    <section id="quienes-somos" class="py-16 sm:py-24 bg-sky-200">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-12 text-blue-900">Misión - Visión - Filosofía</h2>
+            <p class="text-center text-gray-700 mb-12 sm:mb-16 max-w-3xl mx-auto">
+                Formamos Profesionales Idóneos en los campos de Secretariado Ejecutivo, Sistemas Informáticos y Telecomunicaciones a nivel de Técnico Superior, con conocimientos sólidos teóricos y prácticos para que sean capaces de desenvolverse eficientemente, con solvencia y ética en el mercado laboral.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+                <div class="text-center">
+                    <i class="fas fa-trophy text-4xl sm:text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-lg sm:text-2xl font-semibold mb-4 text-blue-800">Filosofía</h3>
+                    <p class="text-gray-600">
+                        Impartir un currículo actualizado y planificado que parte de las experiencias y de las necesidades de los estudiantes y que facilite el desarrollo integral y su capacitación en la especialidad elegida.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-globe text-4xl sm:text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-lg sm:text-2xl font-semibold mb-4 text-blue-800">Misión</h3>
+                    <p class="text-gray-600">
+                        Promover una calidad educativa, arraigada en la cultura de nuestro pueblo y en nuestro tiempo. Estimular, en los estudiantes, la práctica crítica, actitud solidaria, libertad de espíritu, humildad, responsabilidad. Contribuir a la construcción de una sociedad más justa y fraterna. Formar personas capaces de transformar la sociedad con la fuerza del Evangelio.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-cogs text-4xl sm:text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-lg sm:text-2xl font-semibold mb-4 text-blue-800">Visión</h3>
+                    <p class="text-gray-600">
+                        Promover, socialmente a los jóvenes bachilleres de escasos recursos económicos a partir de la opción por los más pobres, formando profesionales capacitados de manera teórica práctica, con un enfoque integral diáfano en los valores cristianos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Carreras Section -->
+     <section id="carreras" class="py-16 sm:py-24 pastel-bg">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-blue-900">Nuestras Carreras</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+                <a href="telecomunicaciones.html" class="bg-white p-6 sm:p-8 rounded-2xl shadow-accent card-hover transition duration-300 border-accent flex flex-col items-center">
+                    <img src="telecomunicaciones.jpg" alt="Telecomunicaciones" class="w-full h-40 sm:h-48 object-cover rounded-t-2xl mb-6">
+                    <img src="icon_telecomunicaciones.jpg" alt="Logo Telecomunicaciones" class="career-logo rounded-full mb-4">
+                    <h3 class="text-lg sm:text-2xl font-semibold mb-4 text-blue-800">Telecomunicaciones</h3>
+                    <p class="text-gray-600 text-center">Aprende a diseñar, instalar y mantener redes de comunicación modernas, preparándote para liderar en un sector en constante evolución.</p>
+                </a>
+                <a href="sistemas.html" class="bg-white p-6 sm:p-8 rounded-2xl shadow-accent card-hover transition duration-300 border-accent flex flex-col items-center">
+                    <img src="sistemas.jpg" alt="Sistemas Informáticos" class="w-full h-40 sm:h-48 object-cover rounded-t-2xl mb-6">
+                    <img src="icon_sistemas.jpg" alt="Logo Sistemas Informáticos" class="career-logo rounded-full mb-4">
+                    <h3 class="text-lg sm:text-2xl font-semibold mb-4 text-blue-800">Sistemas Informáticos</h3>
+                    <p class="text-gray-600 text-center">Domina el desarrollo de software y la gestión de sistemas tecnológicos, abriendo puertas a la innovación en la era digital.</p>
+                </a>
+                <a href="secretariado.html" class="bg-white p-6 sm:p-8 rounded-2xl shadow-accent card-hover transition duration-300 border-accent flex flex-col items-center">
+                    <img src="secretariado.jpg" alt="Secretariado Ejecutivo" class="w-full h-40 sm:h-48 object-cover rounded-t-2xl mb-6">
+                    <img src="icon_secretariado.jpg" alt="Logo Secretariado Ejecutivo" class="career-logo rounded-full mb-4">
+                    <h3 class="text-lg sm:text-2xl font-semibold mb-4 text-blue-800">Secretariado Ejecutivo</h3>
+                    <p class="text-gray-600 text-center">Desarrolla habilidades administrativas y de organización para destacar en entornos profesionales dinámicos y competitivos.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-16 sm:py-24 bg-sky-300">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-blue-900">Galería de fotos</h2>
+            <div class="max-w-4xl mx-auto">
+                <!-- Main Image -->
+                <div class="mb-8">
+                    <img id="main-image" src="01.jpg" alt="Main Gallery Image" class="w-full h-96 object-cover rounded-lg shadow-accent border-accent">
+                </div>
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-2 sm:grid-cols-12 gap-4">
+                    <img src="02.jpg" alt="Gallery Image 1" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="03.jpg" alt="Gallery Image 2" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="04.jpg" alt="Gallery Image 3" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="05.jpg" alt="Gallery Image 4" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="06.jpg" alt="Gallery Image 5" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="07.jpg" alt="Gallery Image 6" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="08.jpg" alt="Gallery Image 7" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="09.jpg" alt="Gallery Image 8" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="10.jpg" alt="Gallery Image 9" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="11.jpg" alt="Gallery Image 10" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="12.jpg" alt="Gallery Image 11" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                    <img src="14.jpg" alt="Gallery Image 12" class="thumbnail w-full h-24 object-cover rounded-lg cursor-pointer transition duration-300 border border-gray-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestros Convenios Section -->
+    <section id="convenios" class="py-16 sm:py-24 bg-blue-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-blue-900">Nuestros Convenios</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 justify-items-center">
+                <div class="flex flex-col items-center">
+                    <img src="conv1.png" alt="Congregación de las Religiosas de Jesús María" class="convenio-logo mb-4">
+                    <p class="text-gray-700 text-center">Congregación de las Religiosas de Jesús María</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="conv2.png" alt="Ministerio de Educación" class="convenio-logo mb-4">
+                    <p class="text-gray-700 text-center">Ministerio de Educación - Estado Plurinacional de Bolivia</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="conv3.png" alt="DGESTTILA" class="convenio-logo mb-4">
+                    <p class="text-gray-700 text-center">DGESTTILA - Dirección General de Educación Superior Técnica, Tecnológica, Lingüística y Artística</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="conv4.png" alt="UTP - Ministerio de Educación" class="convenio-logo mb-4">
+                    <p class="text-gray-700 text-center">UTP - Unidad de Títulos Profesionales - Ministerio de Educación - Estado Plurinacional de Bolivia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-bg text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+                <div><img src="logo_white.png" alt="">
+                </div>
+                <div>
+                   <br>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Empezar</h3>
+                    
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link transition">Iniciar Sesión</a></li>
+                        <li><a href="#" class="footer-link transition">Admisión</a></li>
+                        <li><a href="#carreras" class="footer-link transition">Nuestras Carreras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <br>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Apoyo</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link transition">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="footer-link transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <br>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link transition">Términos de Servicio</a></li>
+                        <li><a href="#" class="footer-link transition">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <br>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Contactos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#contacto" class="footer-link transition">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Map Placeholder -->
+            <div class="mb-8">
+                <a href="https://goo.gl/maps/fzPVWHQwZRH2" type="button" class="btn-floating btn-small btn-so index_icon_social waves-effect waves-light"><img src="mapa.png" class="w-full h-40 object-cover rounded-lg"></a>
+            </div>
+            
+    
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar Menu Toggle
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('active');
+            // Close all dropdowns when toggling the menu
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        }
+
+        // Dropdown Toggle on Click (for all screen sizes)
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default navigation initially
+                const isActive = dropdown.classList.contains('active');
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('active');
+                });
+
+                // Toggle the current dropdown
+                dropdown.classList.toggle('active');
+
+                // If the dropdown was already active, navigate to the parent link
+                if (isActive) {
+                    window.location.href = toggle.getAttribute('href');
+                }
+            });
+
+            // Close dropdown when clicking an item
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    dropdown.classList.remove('active'); // Close the dropdown
+                    if (window.innerWidth < 768) {
+                        document.querySelector('.nav-menu').classList.remove('active'); // Close the mobile menu
+                    }
+                });
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            const isDropdown = e.target.closest('.dropdown');
+            if (!isDropdown) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            }
+        });
+
+        // Gallery Image Swap
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                mainImage.src = this.src;
+                mainImage.alt = this.alt;
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <footer class="footer">
+        <ul class="social-list">
+            <li class="social-item">
+                <a href="#" class="social-btn">SÍGUENOS EN</a>
+            </li>
+            <li class="social-item">
+                <a href="https://www.youtube.com/channel/UC1WdF2amZjCVAlOlbUbhcMg" target="_blank" class="social-btn youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>YouTube</h1>
+                    <p>Instituto Técnico Jesús María</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://twitter.com/InT_JesusMaria" target="_blank" class="social-btn twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Twitter</h1>
+                    <p>@INTJEMinformacion</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://www.facebook.com/IntJem/" target="_blank" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Facebook</h1>
+                    <p>Instituto Técnico Jesús María</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://www.instagram.com/intjem.bo/" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Instagram</h1>
+                    <p>INTJEM.informacion</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://plus.google.com/u/0/106759533525763261202" target="_blank" class="social-btn email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Correo INTJEM</h1>
+                    <p>Correo Institucional</p>
+                </div>
+            </li>
+            <li class="social-item">
+                <a href="https://goo.gl/maps/fzPVWHQwZRH2" target="_blank" class="social-btn gmap">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <div class="hover-content">
+                    <h1>Google Maps</h1>
+                    <p>Nuestra Ubicación</p>
+                </div>
+            </li>
+        </ul>
+        <a href="index.html" class="go-top">^</a>
+    </footer>
+</body>
+</html>
